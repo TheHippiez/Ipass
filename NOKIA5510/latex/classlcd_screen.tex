@@ -1,0 +1,133 @@
+\hypertarget{classlcd_screen}{}\section{lcd\+Screen Class Reference}
+\label{classlcd_screen}\index{lcd\+Screen@{lcd\+Screen}}
+
+
+\hyperlink{classlcd_screen}{lcd\+Screen} class  
+
+
+
+
+{\ttfamily \#include $<$lcd\+Screen.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlcd_screen_a2791f46e6caef9ffb406e8c1165f41a9}{lcd\+Screen} (hwlib\+::target\+::pin\+\_\+out \&enable, hwlib\+::target\+::pin\+\_\+out \&datacommand, hwlib\+::target\+::pin\+\_\+out \&clock, hwlib\+::target\+::pin\+\_\+out \&datain, hwlib\+::target\+::pin\+\_\+out \&reset)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classlcd_screen}{lcd\+Screen} Constructor \end{DoxyCompactList}\item 
+void \hyperlink{classlcd_screen_a613df6d4702cd86941d3a473a846d737}{clear} ()
+\begin{DoxyCompactList}\small\item\em clear; void. \end{DoxyCompactList}\item 
+void \hyperlink{classlcd_screen_a37339d0d8ae50a6efcbae10d3f8c7573}{setup} (int Start\+Matrix)
+\begin{DoxyCompactList}\small\item\em Setup; void. \end{DoxyCompactList}\item 
+void \hyperlink{classlcd_screen_ab75ed961943609fbe7f437e9e86abe4d}{command} (int x\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em command; void. \end{DoxyCompactList}\item 
+void \hyperlink{classlcd_screen_a9d8cee1ed44907c5fbfc52bbe1205853}{draw} (int matrix\mbox{[}8\mbox{]}\mbox{[}84\mbox{]}, int Start\+Matrix)
+\begin{DoxyCompactList}\small\item\em draw; void. \end{DoxyCompactList}\item 
+void \hyperlink{classlcd_screen_af9d494e72329e3eca29209bfd2d05882}{draw\+B\+IG} (int array\mbox{[}48\mbox{]}\mbox{[}84\mbox{]})
+\begin{DoxyCompactList}\small\item\em Draw\+B\+IG; void. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classlcd_screen}{lcd\+Screen} class 
+
+This class is used to initialize 5510 screens. It may also be used by any similair L\+CD screen with the same pins and workings as the Nokia 5510 ( Screen sizes might require some changes in the libary) . The following is a short summary of the 6 functions this class provides\+: \hyperlink{classlcd_screen_a613df6d4702cd86941d3a473a846d737}{clear()}; \+: A function that sets every pixel on the screen to zero. \hyperlink{classlcd_screen_a37339d0d8ae50a6efcbae10d3f8c7573}{setup()}; \+: A function that issues commands to the L\+CD screen, setting it up to receive data. \hyperlink{classlcd_screen_ab75ed961943609fbe7f437e9e86abe4d}{command()}; \+: A function that sends the array to the L\+CD screen. \hyperlink{classlcd_screen_a9d8cee1ed44907c5fbfc52bbe1205853}{draw()}; \+: A function that draws a \mbox{[}8\mbox{]}\mbox{[}84\mbox{]} matrix on the screen! \hyperlink{classlcd_screen_af9d494e72329e3eca29209bfd2d05882}{draw\+B\+I\+G()}; \+: A function that draws a \mbox{[}48\mbox{]}\mbox{[}84\mbox{]} matrix on the screen!. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{lcd\+Screen@{lcd\+Screen}!lcd\+Screen@{lcd\+Screen}}
+\index{lcd\+Screen@{lcd\+Screen}!lcd\+Screen@{lcd\+Screen}}
+\subsubsection[{\texorpdfstring{lcd\+Screen(hwlib\+::target\+::pin\+\_\+out \&enable, hwlib\+::target\+::pin\+\_\+out \&datacommand, hwlib\+::target\+::pin\+\_\+out \&clock, hwlib\+::target\+::pin\+\_\+out \&datain, hwlib\+::target\+::pin\+\_\+out \&reset)}{lcdScreen(hwlib::target::pin_out &enable, hwlib::target::pin_out &datacommand, hwlib::target::pin_out &clock, hwlib::target::pin_out &datain, hwlib::target::pin_out &reset)}}]{\setlength{\rightskip}{0pt plus 5cm}lcd\+Screen\+::lcd\+Screen (
+\begin{DoxyParamCaption}
+\item[{hwlib\+::target\+::pin\+\_\+out \&}]{p\+\_\+enable, }
+\item[{hwlib\+::target\+::pin\+\_\+out \&}]{p\+\_\+datacommand, }
+\item[{hwlib\+::target\+::pin\+\_\+out \&}]{p\+\_\+clock, }
+\item[{hwlib\+::target\+::pin\+\_\+out \&}]{p\+\_\+datain, }
+\item[{hwlib\+::target\+::pin\+\_\+out \&}]{p\+\_\+reset}
+\end{DoxyParamCaption}
+)}\hypertarget{classlcd_screen_a2791f46e6caef9ffb406e8c1165f41a9}{}\label{classlcd_screen_a2791f46e6caef9ffb406e8c1165f41a9}
+
+
+\hyperlink{classlcd_screen}{lcd\+Screen} Constructor 
+
+This constructor consists of 5 pins. enable(p\+\_\+enable)\+: This pin must be set to 0 ( active low ) for any other operation to take place. datacommand(p\+\_\+datacommand)\+: This pin is set to 0 to send commands to the screen, set it to 1 for data. clock(p\+\_\+clock)\+: This pin is the clock. datain(p\+\_\+datain)\+: This pin is the data pin, all the 1\textquotesingle{}s and 0\textquotesingle{}s go through this. reset(p\+\_\+reset)\+: This pin is the reset. 
+
+\subsection{Member Function Documentation}
+\index{lcd\+Screen@{lcd\+Screen}!clear@{clear}}
+\index{clear@{clear}!lcd\+Screen@{lcd\+Screen}}
+\subsubsection[{\texorpdfstring{clear()}{clear()}}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\+Screen\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classlcd_screen_a613df6d4702cd86941d3a473a846d737}{}\label{classlcd_screen_a613df6d4702cd86941d3a473a846d737}
+
+
+clear; void. 
+
+Parameters\+:
+\begin{DoxyItemize}
+\item Variables\+: matrix = empty matrix. Calls on the draw function and empties the screen. 
+\end{DoxyItemize}\index{lcd\+Screen@{lcd\+Screen}!command@{command}}
+\index{command@{command}!lcd\+Screen@{lcd\+Screen}}
+\subsubsection[{\texorpdfstring{command(int x[])}{command(int x[])}}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\+Screen\+::command (
+\begin{DoxyParamCaption}
+\item[{int}]{x\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{classlcd_screen_ab75ed961943609fbe7f437e9e86abe4d}{}\label{classlcd_screen_ab75ed961943609fbe7f437e9e86abe4d}
+
+
+command; void. 
+
+Parameters\+: Int x\mbox{[}\mbox{]} \+: Array filled with the command data. Variables\+:
+\begin{DoxyItemize}
+\item Simple for loop puts the data from the array on the datain pin. 
+\end{DoxyItemize}\index{lcd\+Screen@{lcd\+Screen}!draw@{draw}}
+\index{draw@{draw}!lcd\+Screen@{lcd\+Screen}}
+\subsubsection[{\texorpdfstring{draw(int matrix[8][84], int Start\+Matrix)}{draw(int matrix[8][84], int StartMatrix)}}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\+Screen\+::draw (
+\begin{DoxyParamCaption}
+\item[{int}]{matrix\mbox{[}8\mbox{]}\mbox{[}84\mbox{]}, }
+\item[{int}]{Start\+Matrix}
+\end{DoxyParamCaption}
+)}\hypertarget{classlcd_screen_a9d8cee1ed44907c5fbfc52bbe1205853}{}\label{classlcd_screen_a9d8cee1ed44907c5fbfc52bbe1205853}
+
+
+draw; void. 
+
+Parameters\+: Matrix \+: Matrix you give to the function. This is a \mbox{[}8\mbox{[} bij \mbox{[}84\mbox{]}, which means 1 row on the screen. Which means this is the function to draw 1 line of text to the screen. Variables\+: matrix\mbox{[}8\mbox{]}\mbox{[}84\mbox{]} \+: Start\+Matrix \+: Function to Draw 1 row on the screen. The way the screen works is that the screen is divied in 6 matrixen of 8 vertically and 84 horzizontally. You draw on it by drawing rows of 8 vertically. So like this \+: 1 1 2 2 3 3 4 4 5 5 6 6 \index{lcd\+Screen@{lcd\+Screen}!draw\+B\+IG@{draw\+B\+IG}}
+\index{draw\+B\+IG@{draw\+B\+IG}!lcd\+Screen@{lcd\+Screen}}
+\subsubsection[{\texorpdfstring{draw\+B\+I\+G(int array[48][84])}{drawBIG(int array[48][84])}}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\+Screen\+::draw\+B\+IG (
+\begin{DoxyParamCaption}
+\item[{int}]{matrix\mbox{[}48\mbox{]}\mbox{[}84\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{classlcd_screen_af9d494e72329e3eca29209bfd2d05882}{}\label{classlcd_screen_af9d494e72329e3eca29209bfd2d05882}
+
+
+Draw\+B\+IG; void. 
+
+Parameters\+:
+\begin{DoxyItemize}
+\item Variables\+: Matrix\mbox{[}48\mbox{]}\mbox{[}84\mbox{]} \+: Huge matrix Works the same as Draw, but this one draws on the whole screen in one go. 
+\end{DoxyItemize}\index{lcd\+Screen@{lcd\+Screen}!setup@{setup}}
+\index{setup@{setup}!lcd\+Screen@{lcd\+Screen}}
+\subsubsection[{\texorpdfstring{setup(int Start\+Matrix)}{setup(int StartMatrix)}}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\+Screen\+::setup (
+\begin{DoxyParamCaption}
+\item[{int}]{Start\+Matrix}
+\end{DoxyParamCaption}
+)}\hypertarget{classlcd_screen_a37339d0d8ae50a6efcbae10d3f8c7573}{}\label{classlcd_screen_a37339d0d8ae50a6efcbae10d3f8c7573}
+
+
+Setup; void. 
+
+Parameters\+: Start\+Matrix \+: Where do you want to start drawing? 0 to 5. Variables\+: A through f \+: All these arrays are needed to iniate the screen. Setup for the screen. Standard command to initalize it, extra commands included for drawing positions. selecting extended instructions
+
+Vop = 110000b
+
+T\+Cx = 00b
+
+Funcion set PD = 0 and V = 0
+
+B\+Sx = 100b
+
+normal mode 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lcd\+Screen.\+hpp\item 
+lcd\+Screen.\+cpp\end{DoxyCompactItemize}
