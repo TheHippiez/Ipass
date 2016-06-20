@@ -77,7 +77,9 @@ bool GuardObject::Guard(){
     while(1){
         int test= sens.MsDistance();
         if( (check_a < test) && (check_b > test) ){
+            lcd.clear();
             ItemSecureText();
+            hwlib::wait_ms(3);
         }
         if((test < check_a) || (test > check_b)){
             lcd.clear();
